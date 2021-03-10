@@ -12,6 +12,7 @@ class MainAdapter(private val data: List<Hewan>) :
         fun bind(hewan: Hewan) = with(binding) {
             namaTextView.text = hewan.nama
             latinTextView.text = hewan.namaLatin
+            jenisTextView.text = hewan.jenisHewan
             imageView.setImageResource(hewan.imageResId)
 
         }
@@ -29,7 +30,7 @@ class MainAdapter(private val data: List<Hewan>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.bind(data[position])
-        }
-
+        holder.bind(data[position])
     }
+
+}

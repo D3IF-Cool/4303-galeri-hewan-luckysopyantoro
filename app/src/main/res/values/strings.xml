@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Galeri Hewan</string>
-    <string name="jenisHewan">Hewan</string>
+    <string name="jenisHewan">Jenis Hewan</string>
     <string name="namalatin">Nama Latin</string>
     <string name="hewan">Nama Hewan</string>
 </resources>
