@@ -3,4 +3,5 @@
     <string name="jenisHewan">Jenis Hewan</string>
     <string name="namalatin">Nama Latin</string>
     <string name="hewan">Nama Hewan</string>
+    <string name="koneksi_error">Koneksi Error</string>
 </resources>
