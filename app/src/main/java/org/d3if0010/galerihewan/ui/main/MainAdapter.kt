@@ -6,17 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import org.d3if0010.galerihewan.databinding.ListItemBinding
 import org.d3if0010.galerihewan.model.Hewan
 
-class MainAdapter(private val data: List<Hewan>) :
-    RecyclerView.Adapter<MainAdapter.ViewHolder>() {
-    class ViewHolder(private val binding: ListItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(hewan: Hewan) = with(binding) {
-            namaTextView.text = hewan.nama
-            latinTextView.text = hewan.namaLatin
-            jenisTextView.text = hewan.jenisHewan
-            imageView.setImageResource(hewan.imageResId)
-
-        }
+class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+    private val data = mutableListOf<Hewan>()
+    fun updateData(newData: List<Hewan>) {
+        data.clear()
+        data.addAll(newData)
+        notifyDataSetChanged()
+     }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
